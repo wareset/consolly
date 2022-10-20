@@ -1,2 +1,2 @@
 # consolly
-Console emulator/simulator in browser
+Console interceptor/emulator/simulator for browser

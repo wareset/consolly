@@ -1,0 +1,96 @@
+.cnly {
+
+  &-root {
+    width: 0;
+    height: 0;
+    overflow: visible;
+    font-family: monospace;
+    line-height: 1.25;
+    position: relative;
+    z-index: 100000000;
+
+    flex-direction: column;
+
+    * {
+      font-size: inherit;
+      font-family: inherit;
+      line-height: inherit;
+      box-sizing: border-box !important;
+    }
+  }
+
+  // &-toggle {}
+
+  // MAIN
+  &-main {
+    background-color: #eee;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 9px;
+    min-height: 9px;
+    position: fixed;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  // /MAIN
+
+  // RESIZER
+  &-resizer {
+    position: absolute;
+    background-color: #ccc;
+    width: 1px;
+    height: 1px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      background-color: #ccc9;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    &:hover:before {
+      opacity: 1;
+    }
+  }
+
+  &-top &-resizer {
+    bottom: 0;
+    width: 100%;
+    cursor: row-resize;
+    cursor: s-resize;
+  }
+
+  &-left &-resizer {
+    right: 0;
+    height: 100%;
+    cursor: col-resize;
+    cursor: e-resize;
+  }
+
+  &-right &-resizer {
+    left: 0;
+    height: 100%;
+    cursor: col-resize;
+    cursor: w-resize;
+  }
+
+  &-bottom &-resizer {
+    top: 0;
+    width: 100%;
+    cursor: row-resize;
+    cursor: n-resize;
+  }
+
+  // /RESIZER
+
+  &-icon-close {
+    background: center/contain no-repeat svg-load("./svg/x-lg.svg", fill=#ad3);
+  }
+}

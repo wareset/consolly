@@ -1,0 +1,11 @@
+export declare const is_null: (v: any) => v is null;
+export declare const is_void: (v: any) => v is undefined;
+export declare const is_nil: (v: any) => v is null | undefined;
+export declare const is_nan: (v: any) => boolean;
+export declare const is_number: (v: any) => v is number;
+export declare const is_bigint: (v: any) => v is number;
+export declare const is_string: (v: any) => v is number;
+export declare const is_symbol: (v: any) => v is number;
+export declare const is_boolean: (v: any) => v is number;
+export declare const is_function: (v: any) => v is number;
+export declare const is_object: (v: any) => v is number;
